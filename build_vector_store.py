@@ -1,4 +1,5 @@
 # build_vector_store.py
+import os
 import pandas as pd
 import numpy as np
 import faiss
@@ -8,6 +9,11 @@ from langchain_openai import OpenAIEmbeddings  # Updated import
 # Load the hospital summaries
 df = pd.read_csv("./data/cms_transformed/hospital_summaries.csv")
 summaries = df['summary'].tolist()
+
+
+API_KEY = os.environ.get("OPENAI_API_KEY")
+if not API_KEY:
+    raise ValueError("Please set the OPENAI_API_KEY environment variable.")
 
 # Initialize the OpenAI embeddings model
 
