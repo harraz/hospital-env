@@ -1,0 +1,12 @@
+hospital-env/
+__pycache__/
+*.pyc
+.env
+
+bin/
+lib/
+lib64/
+share/
+etc/
+include/
+lib64
