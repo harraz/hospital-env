@@ -11,28 +11,44 @@ The hospital data analyzed in this project is obtained from the CMS Medicare Sha
 
 These data points help evaluate hospitals' effectiveness in delivering cost-efficient, high-quality care and serve as a basis for comparative analysis and performance improvement strategies.
 
+## Data Source
+
+The hospital data analyzed in this project is obtained from the CMS Medicare Shared Savings Program's [Performance Year Financial and Quality Results](https://data.cms.gov/medicare-shared-savings-program/performance-year-financial-and-quality-results) dataset. This dataset provides insights into hospital performance, including both financial metrics and quality outcomes.
+
+## Features
+
+- **Financial Metrics:**  
+  - **Final Share Rate:** Percentage of cost savings shared among providers.
+  - **Final Loss Rate:** Percentage of losses an ACO is liable for in two-sided models.
+
+- **Quality Performance:**  
+  - **QualScore:** Overall health equity adjusted quality performance score.
+  - **Additional Quality Measures:**  
+    - **QualityID_318:** Falls screening for future fall risk.
+    - **QualityID_110:** Influenza immunization rates.
+    - **QualityID_226:** Tobacco use screening and cessation intervention.
+    - **QualityID_001_WI:** Diabetes control (HbA1c >9%).
+
+- **Patient Experience (CAHPS):**  
+  - **CAHPS_1:** Getting timely care, appointments, and information.
+  - **CAHPS_2:** Communication effectiveness of providers.
+  - **CAHPS_3:** Overall patient rating of providers.
+  - **CAHPS_4:** Access to specialists.
+
 ## Example Prompt Questions
 
 Here are some sample questions that a hospital administrator might ask using this system:
 
-1. **"What is the average quality score for hospitals in the region compared to the state average?"**
+1. **"Which hospital has the lowest 30-day readmission rate (Measure_479) and how does its financial performance (Final Share Rate and Final Loss Rate) compare to others?"**
 
-2. **"Which hospital achieved the best financial performance this performance year based on Final Share Rate and Final Loss Rate?"**
+2. **"How do the quality measures for falls screening (QualityID_318) and diabetes control (QualityID_001_WI) correlate with unplanned admissions for patients with multiple chronic conditions (Measure_484)?"**
 
-3. **"Can you provide a comparison of financial and quality metrics for the top 5 hospitals in the region?"**
+3. **"Provide a comparison of hospitals based on overall quality score, CAHPS patient experience measures, and readmission rates."**
 
-4. **"How have the quality scores of hospitals changed over the past performance year in relation to their financial metrics?"**
+4. **"What trends can be observed between patient satisfaction (CAHPS fields) and clinical quality measures, such as influenza immunization (QualityID_110) and tobacco use screening (QualityID_226)?"**
 
-5. **"Identify any emerging trends among hospitals regarding cost efficiency and patient care quality from the latest data."**
+5. **"Identify hospitals that demonstrate a strong balance between high quality performance (QualScore and additional quality metrics) and low readmission rates."**
 
-
-## Features
-
-- **Data Fetching:** Retrieves hospital data (Performance Year, Financial, and Quality Results) from a CMS API.
-- **Data Preprocessing:** Extracts relevant fields and creates text summaries from the raw data.
-- **Embedding & Vector Store:** Uses OpenAI embeddings to convert summaries into vectors and builds a FAISS index for fast similarity search.
-- **RAG Pipeline:** Retrieves context based on a query and generates answers using a language model.
-- **User Interface:** A simple Streamlit app for interactive querying.
 
 ## Project Structure
 ```md
