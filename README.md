@@ -2,6 +2,16 @@
 
 This repository contains an end-to-end pipeline for a hospital analytics question-and-answer bot built using a Retrieval-Augmented Generation (RAG) framework. The project fetches hospital data via a CMS API, preprocesses the data to extract key metrics, generates embeddings using OpenAI, builds a FAISS vector store for efficient retrieval, and leverages a language model (LLM) to generate answers based on the retrieved context. A Streamlit web app provides a user-friendly interface for querying the system.
 
+## Data Source
+
+The hospital data analyzed in this project is obtained from the CMS Medicare Shared Savings Program's [Performance Year Financial and Quality Results](https://data.cms.gov/medicare-shared-savings-program/performance-year-financial-and-quality-results). This public dataset provides detailed insights into hospital performance through key metrics such as:
+
+- **Financial Results:** Metrics like Final Share Rate and Final Loss Rate, which indicate how financial performance is shared among providers under value-based care arrangements.
+- **Quality Results:** Quality Scores and other measures that reflect patient outcomes and overall care quality.
+
+These data points help evaluate hospitals' effectiveness in delivering cost-efficient, high-quality care and serve as a basis for comparative analysis and performance improvement strategies.
+
+
 ## Features
 
 - **Data Fetching:** Retrieves hospital data (Performance Year, Financial, and Quality Results) from a CMS API.
