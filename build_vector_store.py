@@ -16,6 +16,8 @@ if not API_KEY:
     raise ValueError("Please set the OPENAI_API_KEY environment variable.")
 
 # Initialize the OpenAI embeddings model
+embeddings_model = \
+    OpenAIEmbeddings(api_key=API_KEY)
 
 # Generate embeddings for each summary
 # embeddings_list = [embeddings_model.embed_text(text) for text in summaries]
