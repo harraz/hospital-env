@@ -11,6 +11,20 @@ The hospital data analyzed in this project is obtained from the CMS Medicare Sha
 
 These data points help evaluate hospitals' effectiveness in delivering cost-efficient, high-quality care and serve as a basis for comparative analysis and performance improvement strategies.
 
+## Example Prompt Questions
+
+Here are some sample questions that a hospital administrator might ask using this system:
+
+1. **"What is the average quality score for hospitals in the region compared to the state average?"**
+
+2. **"Which hospital achieved the best financial performance this performance year based on Final Share Rate and Final Loss Rate?"**
+
+3. **"Can you provide a comparison of financial and quality metrics for the top 5 hospitals in the region?"**
+
+4. **"How have the quality scores of hospitals changed over the past performance year in relation to their financial metrics?"**
+
+5. **"Identify any emerging trends among hospitals regarding cost efficiency and patient care quality from the latest data."**
+
 
 ## Features
 
