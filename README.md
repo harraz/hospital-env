@@ -11,13 +11,15 @@ This repository contains an end-to-end pipeline for a hospital analytics questio
 - **User Interface:** A simple Streamlit app for interactive querying.
 
 ## Project Structure
-`. ├── fetch_data.py # Fetches hospital data from the CMS API 
+```md
+. ├── fetch_data.py # Fetches hospital data from the CMS API 
 ├── preprocess.py # Preprocesses data and creates text summaries
 ├── build_vector_store.py # Generates embeddings and builds the FAISS vector store
 ├── rag_pipeline.py # RAG pipeline to retrieve context and generate answers
 ├── app.py # Streamlit app for user interaction
 ├── requirements.txt # List of required Python packages
-└── README.md # This file`
+└── README.md # This file
+```
 
 ## Requirements
 
